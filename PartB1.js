@@ -55,7 +55,7 @@ console.log("B1.3 Sorted array Ascending: ", sortedNumbers);
  * --------------
  */
 /**
- * InsertInOrder
+ * insertInOrder
  * Insert a single value into an already sorted array 
  * Array must stay in ascending order without re-sorting
  * @param {number[]} sortedArray - an array already in ascending order
@@ -83,3 +83,33 @@ for (const numToInsert of b14) {
     sortedNumbers = insertInOrder(sortedNumbers, numToInsert);
 }
 console.log("B1.4 After inserting 19, 23, 30: ", sortedNumbers);
+
+/**
+ * --------------
+ * B1.5 - Remove 8 and 31 and keep the sarray sorted
+ * --------------
+ * */
+/**
+ * removeValue function
+ * Removes the first occurrence of a value from an array
+ * Since array is already in ascending order, removing an element leaves it in order
+ * @param {number[]} sourceArray - array to remove the value from 
+ * @param {number} valueToRemove - value to remove, will be array of 8 and 13
+ * @returns {number[]} - returns updated array with values removed
+ */
+function removeValue(sourceArray, valueToRemove) {
+    // findIndex: find the index position of a value or return -1 
+    // if it does not exist in the array
+    const findIndex = sourceArray.indexOf(valueToRemove);
+    if (findIndex !== -1) {
+        sourceArray.splice(findIndex, 1);
+    }
+    return sourceArray;
+}
+
+//numbersToRemove: two values from B1.5 that we need to remove
+const numbersToRemove = [8, 31];
+for (const toRemove of numbersToRemove) {
+    sortedNumbers = removeValue(sortedNumbers, toRemove);
+} 
+console.log("B1.5 After removing 8, 31: ", sortedNumbers);
