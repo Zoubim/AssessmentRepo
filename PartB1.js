@@ -113,3 +113,32 @@ for (const toRemove of numbersToRemove) {
     sortedNumbers = removeValue(sortedNumbers, toRemove);
 } 
 console.log("B1.5 After removing 8, 31: ", sortedNumbers);
+
+/**
+ * ----------------
+ * B1.6 - Create a "sequentialSearch" function
+ * ----------------
+ */
+/**
+ * sequentialSearch
+ * Looks at every element of the array in turn until 
+ * a target value is found.
+ * Cannot use "find" standard function/method
+ * @param {number[]} searchArray - array to search
+ * @param {number} targetValue - value being looked for
+ * @returns {number} the index of the value, or -1 when its not found
+ *  * 5.	Create a JavaScript function called “sequentialSearch”
+•	This function accepts two parameters: an array and a value
+•	This function searches the input array for the input value using sequential search
+•	You cannot use the JavaScript build-in “find” function. You must  implement the algorithm with you own code.
+•	This function returns the index of the target value if found and or -1 if not found
+ */
+function sequentialSearch(searchArray, targetValue) {
+    for (let i = 0; i < searchArray.length; i++) {
+        if (searchArray[i] === targetValue) {
+            return i;
+        }
+    } return -1;
+}
+console.log("B1.6 sequential search for 20: ", sequentialSearch(sortedNumbers, 20));
+console.log("B1.6 sequentialSearch for 99: ", sequentialSearch(sortedNumbers, 99));
