@@ -142,3 +142,41 @@ function sequentialSearch(searchArray, targetValue) {
 }
 console.log("B1.6 sequential search for 20: ", sequentialSearch(sortedNumbers, 20));
 console.log("B1.6 sequentialSearch for 99: ", sequentialSearch(sortedNumbers, 99));
+
+/**
+ * --------------
+ * B1.7 - Create a "binarySearch" function 
+ * --------------
+ */
+/**
+ * binarySearch
+ * Halves the search range of a sorted array by comparing
+ * target against middle element.
+ * returns index of the value if it is  found, else -1
+ * @param {number[]} searchArray - array to search
+ * @param {number} targetValue - value to search for
+ * @returns {number} - return index of the array if targetValue is found, else -1
+ */
+function binarySearch(searchArray, targetValue) {
+    //lowI is the lower bound of the range, which is 0 obviously
+    let lowI = 0;
+    //highI is the upper bound of the range
+    let highI = searchArray.length - 1;
+    while (lowI <= highI) {
+        // Calculate middle index
+        const middleI = Math.floor((lowI + highI)/2);
+
+        if (searchArray[middleI] === targetValue) {
+            return middleI;
+        } 
+        if (searchArray[middleI] < targetValue) {
+            lowI = middleI + 1;
+        }
+        if (searchArray[middleI] > targetValue) {
+            highI = middleI - 1;
+        }
+
+    } return -1;
+}
+console.log("B1.7 binarySearch for 30: ", binarySearch(sortedNumbers, 16));
+console.log("B1.7 binarySearch for 500: ", binarySearch(sortedNumbers, 500));
