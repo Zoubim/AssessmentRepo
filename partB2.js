@@ -34,3 +34,14 @@ myMovie.rating = 5;
 myMovie.summary = "World War II movie about the Normandy landings"
 
 console.log("B2.3 After adding rating and summary:", myMovie);
+
+/**
+ * --------
+ * B2.4 - Change data of the properties
+ * ----------
+ */
+// Modify rating to 4 instead of 5, and year to 1962 from 1964
+myMovie.rating = 4;
+myMovie.year = 1962;
+
+console.log("B2.4 After updating rating and year:", myMovie);
