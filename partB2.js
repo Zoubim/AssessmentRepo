@@ -5,7 +5,11 @@
  * delete properties from it 
  */
 
-
+/**
+ * Repository used same as part B1
+ * Repo name: AssessmentRepo
+ * Repo URL: https://github.com/Zoubim/AssessmentRepo.git
+ */
 /**
  * ----------
  * B2.2 - Build the object
