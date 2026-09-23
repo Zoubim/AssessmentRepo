@@ -22,3 +22,15 @@ const myMovie = {
     year: 1964
 };
 console.log("B2.2 Object created:", myMovie)
+
+/**
+ * ----------
+ * B2.3 - Add properties and data to object
+ * ----------
+ */
+// Add rating 5 to the object
+myMovie.rating = 5;
+// Add a summary: World War II movie about the normandy landings
+myMovie.summary = "World War II movie about the Normandy landings"
+
+console.log("B2.3 After adding rating and summary:", myMovie);
