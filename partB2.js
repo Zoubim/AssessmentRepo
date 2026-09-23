@@ -45,3 +45,12 @@ myMovie.rating = 4;
 myMovie.year = 1962;
 
 console.log("B2.4 After updating rating and year:", myMovie);
+
+/**
+ * ---------
+ * B2.5 - Remove summary property from object
+ * ---------
+ */
+
+delete myMovie.summary;
+console.log("B2.5 After removing summary:", myMovie);
